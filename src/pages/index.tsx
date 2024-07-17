@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Github, LinkedIn, ProfilePic } from "@/assets";
 import { Header } from "@/components";
 import { roboto } from "@/styles/fonts/fonts";
@@ -9,23 +9,31 @@ import Link from "next/link";
 export default function Home() {
   const router = useRouter();
   const [currentText, setCurrentText] = useState("criativo");
-  const texts = ["criativo", "comunicativo", "proativo", "resiliente"];
+  
+  const softSkills = useMemo(() => [
+    "criativo", 
+    "comunicativo", 
+    "proativo", 
+    "resiliente", 
+    "líder",
+    "apaixonado pelo que faz"
+  ], []);
 
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
-      index = (index + 1) % texts.length;
-      setCurrentText(texts[index]);
-    }, 1000); // Muda a cada 2 segundos
+      index = (index + 1) % softSkills.length;
+      setCurrentText(softSkills[index]);
+    }, 1000);
 
     return () => clearInterval(interval);
-  }, [texts]);
+  }, [softSkills]);
 
-  interface softSkillProp {
+  interface SoftSkillProp {
     text: string;
   }
 
-  const SoftSkill = ({ text }: softSkillProp) => {
+  const SoftSkill = ({ text }: SoftSkillProp) => {
     return <span className="font-bold">{text}</span>;
   };
 
@@ -33,10 +41,10 @@ export default function Home() {
     <div>
       <Header />
 
-      <div className="w-full  pt-16 pb-8 container mx-auto flex items-center justify-center">
-        <div className="  w-3/4 flex items-center justify-between">
-          <div className=" w-1/2 gap-9  flex flex-col justify-around items-start">
-            <h1 className="text-2xl  ">
+      <div className="w-full pt-16 pb-8 container mx-auto flex items-center justify-center">
+        <div className="w-3/4 flex items-center justify-between">
+          <div className="w-1/2 gap-9 flex flex-col justify-around items-start">
+            <h1 className="text-2xl">
               Desenvolvedor Frontend | React | Next.js | Typescript | Scrum
               Master | Analista de Projetos | Pós Junior
             </h1>
@@ -46,10 +54,10 @@ export default function Home() {
               <br />
               Sou um entusiasta de tecnologia, inovação e de como podemos
               transformar ideias em soluções de alto impacto, solucionando
-              problemas, aprimorando processos e impactandos pessoas e
+              problemas, aprimorando processos e impactando pessoas e
               contextos.
             </p>
-            <div className=" w-1/2 flex items-start justify-start gap-5">
+            <div className="w-1/2 flex items-start justify-start gap-5">
               <button
                 onClick={() => router.push("/contact")}
                 className="w-32 bg-dark-highlight h-9 rounded-2xl text-dark-primary hover:text-dark-text transition-all"
@@ -62,7 +70,6 @@ export default function Home() {
                 className="border-2 rounded-3xl p-2"
                 target="_blank"
               >
-                {" "}
                 <Image src={LinkedIn} alt="ícone do linkedin" />
               </Link>
 
@@ -79,13 +86,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" w-full  pt-8 pb-8 container mx-auto flex items-center justify-center">
-        <div className=" flex items-center flex-col justify-normal gap-3">
+      <div className="w-full pt-8 pb-8 container mx-auto flex items-center justify-center">
+        <div className="flex items-center flex-col justify-normal gap-3">
           <h1 className="text-4xl">
             &lt;Um desenvolvedor{" "}
             <span className="text-dark-highlight">{currentText}</span> /&gt;
           </h1>
-          <p className=" w-1/3 text-center text-xl">
+          <p className="w-1/3 text-center text-xl">
             Além de habilidades técnicas, trago em minha bagagem diversas
             habilidades interpessoais, como <SoftSkill text="boa comunicação" />
             , <SoftSkill text="liderança eficaz" /> ,{" "}
