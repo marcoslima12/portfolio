@@ -19,7 +19,7 @@ export const Header = () => {
           <nav className="flex items-center gap-12">
             <Link href="/">
               <span
-                className={`text-lg font-medium hover:text-dark-highlight border-l-4 pl-2 ${
+                className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
                   currentPath === "/"
                     ? "border-dark-highlight text-dark-highlight"
                     : "border-transparent"
@@ -30,7 +30,7 @@ export const Header = () => {
             </Link>
             <Link href="/about">
               <span
-                className={`text-lg font-medium hover:text-dark-highlight border-l-4 pl-2 ${
+                className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
                   currentPath === "/about"
                     ? "border-dark-highlight text-dark-highlight"
                     : "border-transparent"
@@ -41,7 +41,7 @@ export const Header = () => {
             </Link>
             <Link href="/contact">
               <span
-                className={`text-lg font-medium hover:text-dark-highlight border-l-4 pl-2 ${
+                className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
                   currentPath === "/contact"
                     ? "border-dark-highlight text-dark-highlight"
                     : "border-transparent"
