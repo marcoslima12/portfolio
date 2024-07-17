@@ -15,7 +15,7 @@ export const Header = () => {
 
   const NavOp = ({ link, pageName, currentPath }: navOpRouting) => {
     return (
-      <Link href={`/${link}`}>
+      <Link href={link}>
         <span
           className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
             currentPath === link
@@ -58,11 +58,11 @@ export const Header = () => {
         />
         <div className="flex items-center gap-9">
           <nav className="flex items-center gap-12">
-            <NavOp currentPath={currentPath} link="" pageName="Início" />
-            <NavOp currentPath={currentPath} link="about" pageName="Sobre" />
+            <NavOp currentPath={currentPath} link="/" pageName="Início" />
+            <NavOp currentPath={currentPath} link="/about" pageName="Sobre" />
             <NavOp
               currentPath={currentPath}
-              link="contact"
+              link="/contact"
               pageName="Contato"
             />
           </nav>
