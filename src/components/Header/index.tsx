@@ -7,6 +7,28 @@ export const Header = () => {
   const router = useRouter();
   const currentPath = router.pathname;
 
+  interface navOpRouting {
+    link: string;
+    pageName: string;
+    currentPath: string;
+  }
+
+  const NavOp = ({ link, pageName, currentPath}: navOpRouting) => {
+    return (
+      <Link href={`/${link}`}>
+        <span
+          className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
+            currentPath === link
+              ? "border-dark-highlight text-dark-highlight"
+              : "border-transparent"
+          }`}
+        >
+          {pageName}
+        </span>
+      </Link>
+    );
+  };
+
   return (
     <header className="w-full h-32 shadow-lg shadow-light-highlight">
       <div className="container mx-auto flex items-center justify-between h-full">
@@ -17,39 +39,9 @@ export const Header = () => {
         />
         <div className="flex items-center gap-9">
           <nav className="flex items-center gap-12">
-            <Link href="/">
-              <span
-                className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
-                  currentPath === "/"
-                    ? "border-dark-highlight text-dark-highlight"
-                    : "border-transparent"
-                }`}
-              >
-                Início
-              </span>
-            </Link>
-            <Link href="/about">
-              <span
-                className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
-                  currentPath === "/about"
-                    ? "border-dark-highlight text-dark-highlight"
-                    : "border-transparent"
-                }`}
-              >
-                Sobre
-              </span>
-            </Link>
-            <Link href="/contact">
-              <span
-                className={`text-lg font-medium hover:text-dark-highlight transition-all border-l-4 pl-2 ${
-                  currentPath === "/contact"
-                    ? "border-dark-highlight text-dark-highlight"
-                    : "border-transparent"
-                }`}
-              >
-                Contato
-              </span>
-            </Link>
+            <NavOp currentPath={currentPath} link="/" pageName="Início" />
+            <NavOp currentPath={currentPath} link="/about" pageName="Sobre" />
+            <NavOp currentPath={currentPath} link="/contact" pageName="Contato" />
           </nav>
           <div className="flex gap-8 ml-4">
             <button
