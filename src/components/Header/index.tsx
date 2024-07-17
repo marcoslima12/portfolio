@@ -1,5 +1,5 @@
 import { LanguageIcon, LogoDark, ThemeIcon } from "@/assets";
-import Image from "next/image";
+import Image, { ImageProps, StaticImageData } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -13,7 +13,7 @@ export const Header = () => {
     currentPath: string;
   }
 
-  const NavOp = ({ link, pageName, currentPath}: navOpRouting) => {
+  const NavOp = ({ link, pageName, currentPath }: navOpRouting) => {
     return (
       <Link href={`/${link}`}>
         <span
@@ -29,6 +29,25 @@ export const Header = () => {
     );
   };
 
+  interface IconButtonProps {
+    onClick: () => void;
+    icon: StaticImageData;
+    alt: string;
+  }
+
+  const IconButton = ({ alt, icon, onClick }: IconButtonProps) => {
+    return (
+      <>
+        <button
+          onClick={onClick}
+          className="transition-transform duration-300 hover:rotate-180"
+        >
+          <Image src={icon} alt={alt} />
+        </button>
+      </>
+    );
+  };
+
   return (
     <header className="w-full h-32 shadow-lg shadow-light-highlight">
       <div className="container mx-auto flex items-center justify-between h-full">
@@ -39,29 +58,25 @@ export const Header = () => {
         />
         <div className="flex items-center gap-9">
           <nav className="flex items-center gap-12">
-            <NavOp currentPath={currentPath} link="/" pageName="Início" />
-            <NavOp currentPath={currentPath} link="/about" pageName="Sobre" />
-            <NavOp currentPath={currentPath} link="/contact" pageName="Contato" />
+            <NavOp currentPath={currentPath} link="" pageName="Início" />
+            <NavOp currentPath={currentPath} link="about" pageName="Sobre" />
+            <NavOp
+              currentPath={currentPath}
+              link="contact"
+              pageName="Contato"
+            />
           </nav>
           <div className="flex gap-8 ml-4">
-            <button
+            <IconButton
+              alt="Botão para alternar o tema entre claro e escuro"
+              icon={ThemeIcon}
               onClick={() => console.log("Mudar o tema")}
-              className="transition-transform duration-300 hover:rotate-180"
-            >
-              <Image
-                src={ThemeIcon}
-                alt="Botão para mudar o tema entre claro e escuro"
-              />
-            </button>
-            <button
+            />
+            <IconButton
+              alt="Botão para mudar o idioma entre português e inglês"
+              icon={LanguageIcon}
               onClick={() => console.log("Mudar o idioma")}
-              className="transition-transform duration-300 hover:rotate-180"
-            >
-              <Image
-                src={LanguageIcon}
-                alt="Botão para mudar o idioma entre português e inglês"
-              />
-            </button>
+            />
           </div>
         </div>
       </div>
