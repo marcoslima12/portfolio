@@ -49,7 +49,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="w-full h-32 shadow-lg shadow-light-highlight">
+    <header className=" bg-dark-primary w-full h-32 shadow-lg shadow-light-highlight fixed">
       <div className="container mx-auto flex items-center justify-between h-full">
         <Image
           src={LogoDark}
