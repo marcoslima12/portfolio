@@ -31,7 +31,7 @@ export const Header = () => {
   };
 
   return (
-    <header className=" bg-dark-primary w-full h-32 shadow-lg shadow-light-highlight fixed">
+    <header className=" bg-dark-primary w-full h-32 shadow-lg shadow-light-highlight mb-36 fixed z-10">
       <div className="container mx-auto flex items-center justify-between h-full">
         <Image
           src={LogoDark}
