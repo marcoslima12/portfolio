@@ -11,7 +11,6 @@ import { SectionWrapper } from "@/components/SectionWrapper";
 export default function Home() {
   const router = useRouter();
   const [currentText, setCurrentText] = useState("criativo");
-  
 
   interface SoftSkillProp {
     text: string;
@@ -82,7 +81,7 @@ export default function Home() {
             <TimeForExperience time={time} />
             <TitleForExperience title={role} />
             <LocationForExperience localation={company} />
-            <div className="flex justify-start gap-2">
+            <div className="flex justify-start flex-wrap items-center gap-2">
               {skills.map((skill, index) => (
                 <HardSkill key={index} skill={skill} />
               ))}
@@ -111,8 +110,47 @@ export default function Home() {
     );
   };
 
-  const Banner = () => {
+  interface ProjectProps {
+    title: string;
+    tasks: string[];
+  }
+  const Project = ({ tasks, title }: ProjectProps) => {
     return (
+      <div className="flex flex-col gap-2 w-1/4 flex-auto max-w-96">
+        <TitleForExperience title={title} />
+        <ul className="flex flex-col gap-2">
+          {tasks.map((task, index) => {
+            return <li key={index}>{task}</li>;
+          })}
+        </ul>
+      </div>
+    );
+  };
+
+  const changeSkillText = useCallback(() => {
+    const softSkills = [
+      "criativo",
+      "comunicativo",
+      "proativo",
+      "resiliente",
+      "líder",
+      "apaixonado pelo que faz",
+    ];
+    setCurrentText((prev) => {
+      const currentIndex = softSkills.indexOf(prev);
+      const nextIndex = (currentIndex + 1) % softSkills.length;
+      return softSkills[nextIndex];
+    });
+  }, []);
+
+  useEffect(() => {
+    const intervalId = setInterval(changeSkillText, 1000);
+    return () => clearInterval(intervalId);
+  }, [changeSkillText]);
+
+  return (
+    <>
+      <Header />
       <SectionWrapper>
         <div className="w-3/4 flex items-center justify-between mt-36">
           <div className="w-1/2 gap-9 flex flex-col justify-around items-start">
@@ -125,8 +163,9 @@ export default function Home() {
               <br />
               <br />
               Sou um entusiasta de tecnologia, inovação e de como podemos
-              transformar ideias em soluções de alto impacto, solucionando
-              problemas, aprimorando processos e impactando pessoas e contextos.
+              transformar ideias em soluções de alto impacto, resolvendo
+              problemas, aprimorando processos e impactando pessoas, contextos e
+              a sociedade.
             </p>
             <div className="w-1/2 flex items-start justify-start gap-5">
               <button
@@ -156,11 +195,7 @@ export default function Home() {
           <Image src={ProfilePic} alt="Foto de perfil de Marcos Antonio" />
         </div>
       </SectionWrapper>
-    );
-  };
 
-  const EffectCTA = () => {
-    return (
       <SectionWrapper>
         <div className="flex items-center flex-col justify-normal gap-3">
           <h1 className="text-4xl">
@@ -170,8 +205,7 @@ export default function Home() {
           <p className="w-1/3 text-center text-xl">
             Além de habilidades técnicas, trago em minha bagagem diversas
             habilidades interpessoais, como <SoftSkill text="boa comunicação" />
-            ,
-            <SoftSkill text="liderança eficaz" /> ,{" "}
+            , <SoftSkill text="liderança eficaz" /> ,{" "}
             <SoftSkill text="resolução de conflitos" />,{" "}
             <SoftSkill text="pensamento crítico" /> e{" "}
             <SoftSkill text="trabalho em equipe" />, que adquiri nas minhas
@@ -179,65 +213,106 @@ export default function Home() {
           </p>
         </div>
       </SectionWrapper>
-    );
-  };
 
-  const WorkHistory = () => {
-    return (
       <SectionWrapper>
         <div className="w-3/4 flex flex-col items-start justify-center">
           <SectionTitle title="Experiências Profissionais" />
           <WorkExperience
-            about="Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, participando ativamente desde as etapas mais inicias do produto, como na elicitação de requisitos, 
-            testes de usabilidade e validação com stakeholders. Ainda, participo da definição da stack do projeto, corroborando as decisões sobre as melhores tecnologias, arquitetura e fluxo de desenvolvimento. 
+            about="Sou responsável pelo desenvolvimento frontend dos projetos utilizando tecnologias como React, React Native e Flutter.
+            Participo da construção das soluções, estando presente ativamente desde as etapas mais inicias do projeto e do produto, 
+            como na definição de stack, arquitetura da aplicação, elicitação de requisitos e criação de User Stories.
+            Também, realizo testes de usabilidade do protótipo e as diferentes validações necessárias com os stakeholders.
+           
             
-            Além disso, também atuo como Scrum Master, garantindo a boa e correta aplicação da metodologia, além de participar do gerenciamento do projeto."
+            Ainda, atuo também como Scrum Master do time, conduzindo reuniões importantes de planning, daily e retrospective, 
+            guiando o time a seguir os princípios ágeis do Scrum, além de colaborar fortemente na gestão do backlog.
+          "
             company="LIVE (Laboratório para Cidades Inteligentes)"
             role="Desenvolvedor Frontend | Scrum Master"
             time="Abril de 2024 até o momento"
-            skills={["React", "Typescript", "Flutter"]}
+            skills={[
+              "React",
+              "React Native",
+              "Typescript",
+              "API Rest",
+              "Flutter",
+              "Dart",
+              "Scrum",
+              "UX/UI",
+              "Gerenacimento de Projetos",
+              "Agile",
+            ]}
           />{" "}
           <WorkExperience
-            about="Fui responsável por buscar garantir o sucesso do desenvolvimento de software através da elaboração do backlog de atividades e na supervisão contínua de todas as etapas do processo. Minha abordagem se baseia em metodologias ágeis como Scrum e Kanban, o que me permite coordenar as equipes de forma eficaz.
-                Além disso, sirvo como ponto de apoio técnico para o squad, garantindo que desafios técnicos sejam superados e que as melhores práticas sejam seguidas ao longo do desenvolvimento. Minha atuação se estende à coordenação dos escopos, prazos e entregáveis, em estreita colaboração com os clientes e o time, com o objetivo de assegurar não apenas uma experiência de alta qualidade, mas também resultados excepcionais"
-            company="CITi (Centro Integrado de Tecnologia da UFPE)"
+            about="Desenvolvimento de aplicação web que liga estudantes, professores, comunidades e escolas na busca do melhor 
+            processo de aprenzidado, utilizando diversos dados e métricas."
+            company="Educação"
+            role="Desenvolvedor Frontend [Freelancer]"
+            time="Dezembro de 2023 até o momento"
+            skills={[
+              "React",
+              "Typescript",
+              "React Query",
+              "API Rest",
+              "Chackra UI",
+              "SOLID",
+              "Firebase",
+              "",
+            ]}
+          />{" "}
+          <WorkExperience
+            about="Fui responsável por buscar garantir o sucesso do desenvolvimento de software através da elaboração e gestão do backlog 
+            de atividades e na supervisão contínua de todas as etapas deste processo. 
+            Minha abordagem se baseu em metodologias ágeis como Scrum e Kanban, o que me permitiu coordenar as equipes de forma eficaz.
+            Além disso, era apoio técnico para o squad, garantindo que desafios fossem superados e que as melhores práticas fossem seguidas
+            ao longo do desenvolvimento. 
+            
+            Minha atuação se estendeu à coordenação dos escopos, prazos e entregáveis, em estreita colaboração com os clientes e o time, 
+            com o objetivo de assegurar não apenas uma experiência de alta qualidade, mas também resultados excepcionais"
+            company="CITi (Centro Integrado de Tecnologia da Informação)"
             role="Gerente de Software"
             time="Dezembro de 2022 até dezembro de 2023"
-            skills={["React", "Typescript", "Flutter"]}
+            skills={[
+              "Scrum",
+              "Gerenciamento de Projetos",
+              "Liderança",
+              "Gestão de Riscos",
+              "Kanban",
+              "Agile",
+              "React",
+              "Typescript",
+              "Next.Js",
+              "Node.Js",
+            ]}
           />{" "}
           <WorkExperience
             about="Atuei no desenvolvimento de sistemas web responsivos,
                   trabalhando no frontend como também no backend.
+
                   Minha trajetória inclui a utilização de tecnologias como React,
-                  Next.js, Git, Github, TypeScript, Express e Prisma.
+                  Next.js, Git, Github, TypeScript, Express, Prisma e Docker.
+
                   Tive uma jornada no desenvolvimento web que me capacitou a
                   transformar designs em produtos finais de alta qualidade,
                   combinando criatividade e conhecimento técnico de maneira
                   eficaz."
-            company="CITi (Centro Integrado de Tecnologia da UFPE)"
+            company="CITi (Centro Integrado de Tecnologia da Informação)"
             role="Desenvolvedor Fullstack"
-            time="Abril de 2024 até o momento"
-            skills={["React", "Typescript", "Flutter"]}
-          />{" "}
-          <WorkExperience
-            about="Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-          provident consequuntur sint delectus excepturi fugiat voluptas
-          suscipit eum blanditiis reiciendis et placeat sapiente vel, iure
-          eius autem enim deserunt quidem."
-            company="LIVE (Laboratório para Cidades Inteligentes)"
-            role="Desenvolvedor Frontend | Scrum Master"
-            time="Abril de 2024 até o momento"
-            skills={["React", "Typescript", "Flutter"]}
+            time="Julho de 2022 até dezembro de 2022"
+            skills={[
+              "React",
+              "Typescript",
+              "Bibliotecas de componentes",
+              "Next.Js",
+              "API Rest",
+              "Node.Js",
+              "Express",
+              "Prisma",
+              "Docker",
+            ]}
           />{" "}
         </div>
       </SectionWrapper>
-    );
-  };
-
-
-
-  const EducationalBackgound = () => {
-    return (
       <SectionWrapper>
         <div className="w-3/4 flex flex-col items-start justify-center gap-1">
           <SectionTitle title="Jornada Acadêmica" />
@@ -254,117 +329,57 @@ export default function Home() {
           />
         </div>
       </SectionWrapper>
-    );
-  };
-
-  interface ProjectProps {
-    title: string;
-    about: string;
-  }
-  const Project = ({ about, title }: ProjectProps) => {
-    return (
-      <div className="flex flex-col gap-2 w-1/4 flex-auto max-w-96">
-        <TitleForExperience title={title} />
-        <p>{about}</p>
-      </div>
-    );
-  };
-
-  const Projects = () => {
-    return (
       <SectionWrapper>
         <div className="w-3/4 flex flex-col">
           <SectionTitle title="Projetos que já desenvolvi" />
-          <div className="flex justify-start items-center gap-24 flex-wrap">
+          <div className="flex justify-start items-start gap-24 flex-wrap">
             <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
-              title="CITI+"
-            />
-            <Project
-              about={
-                "Sou responsável pelo desenvolvimento frontend dos projetos, além de participar da construção das soluções, estando presente nas etapas iniciais de ideação e validação até às últimas, de testes e entrega e do processo de gerenacimento dos mesmos"
-              }
+              tasks={[
+                "Implementei a emissão de certificados em PDF após conclusão de um curso interno.",
+              ]}
               title="CITi+"
+            />
+            <Project
+              tasks={[
+                "Desenvolvi aplicação web para gerenciamento de cursos e disciplinas.",
+                "Implementei acompanhamento de estudantes baseado em seus desempenhos, contendo comparativos e rankings, além de diversas outras métricas.",
+                "Contribui na implementação de um gerador de questões por assunto utilizando Gemini do Google.",
+              ]}
+              title="Web Educação"
+            />
+            <Project
+              tasks={[
+                "Desenvolvi uma aplicação web fullstack voltada pra conexão entre compradores, corretores e imobiliária.",
+              ]}
+              title="Web Imóveis"
+            />
+            <Project
+              tasks={[
+                "Desenvolvi aplicativo com Flutter.",
+                "Autenticação social com Google no Firebase.",
+                "Google ML Kit para escanear código de barras de boletos.",
+              ]}
+              title="Payflow"
+            />
+            <Project
+              tasks={[
+                "Desenvolvi aplicação web utilizando Next.Js.",
+                "Utilização de Server Side Rendering para consumo de dados e informações.",
+                "Simulador de compra de produto utilizando o modo Teste do Stripe.",
+              ]}
+              title="Next.Js Shop"
+            />
+            <Project
+              tasks={[
+                "Projeto de curso para aprofundamento em gestão de estados no React.",
+                "Utilização de Redux para gerenciar o estado da aplicação",
+                "Simulação de servidor com Json Server.",
+              ]}
+              title="Redux Video Classes"
             />
           </div>
         </div>
       </SectionWrapper>
-    );
-  };
-
-  /* const changeSkillText = useCallback(() => {
-    const softSkills = [
-      "criativo",
-      "comunicativo",
-      "proativo",
-      "resiliente",
-      "líder",
-      "apaixonado pelo que faz",
-    ];
-    setCurrentText((prev) => {
-      const currentIndex = softSkills.indexOf(prev);
-      const nextIndex = (currentIndex + 1) % softSkills.length;
-      return softSkills[nextIndex];
-    });
-  }, []);
-
-  useEffect(() => {
-    const intervalId = setInterval(changeSkillText, 1000);
-    return () => clearInterval(intervalId);
-  }, [changeSkillText]); */
-
-  return (
-    <>
-      <Header />
-      <Banner />
-      <EffectCTA />
-      <WorkHistory />
-      <EducationalBackgound />
-      <Projects />
     </>
   );
 }
