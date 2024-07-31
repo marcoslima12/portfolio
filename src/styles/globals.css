@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
   
+/* Estilos para dots do react-slick */
+.slick-dots li button:before {
+    @apply text-dark-text; /* Define a cor dos dots como branca */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    @apply text-dark-text;; /* Define a cor dos dots ativos como branca */
+  }
+  
