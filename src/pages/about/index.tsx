@@ -8,6 +8,17 @@ import {
   Car2,
   Car3,
   CarouselImage,
+  CarouselImage1,
+  CarouselImage10,
+  CarouselImage11,
+  CarouselImage2,
+  CarouselImage3,
+  CarouselImage4,
+  CarouselImage5,
+  CarouselImage6,
+  CarouselImage7,
+  CarouselImage8,
+  CarouselImage9,
   LogoDark,
   ProfilePic,
   ThemeIcon,
@@ -33,7 +44,19 @@ const About = ({ dot }: SliderTypes) => {
     ),
   };
 
-  const images = [Car1, Car2, Car3];
+  const images = [
+    CarouselImage1,
+    CarouselImage2,
+    CarouselImage3,
+    CarouselImage4,
+    CarouselImage5,
+    CarouselImage6,
+    CarouselImage7,
+    CarouselImage8,
+    CarouselImage9,
+    CarouselImage10,
+    CarouselImage11,
+  ];
 
   return (
     <>
@@ -41,10 +64,10 @@ const About = ({ dot }: SliderTypes) => {
       <SectionWrapper>
         <div className="w-full flex items-center justify-center gap-32 mt-56">
           <div className="w-1/3">
-            <Slider className="rounded-lg" {...sliderSettings}>
+            <Slider className="rounded-lg flex flex-col justify-center" {...sliderSettings}>
               {images.map((image, index) => {
                 return (
-                  <div key={index} className="p-1">
+                  <div key={index} className="p-1 flex flex-important justify-center">
                     <Image
                       src={image}
                       alt="Foto do carrosel"
@@ -64,7 +87,10 @@ const About = ({ dot }: SliderTypes) => {
               sou filho de Antônio e Rosineide.
               <br />
               Natural de Timbaúba, interior de Pernambuco, sou fã de música e
-              apaixonado por conexões e experiências. Por isso, me considero um
+              apaixonado por conexões e experiências. 
+              Gosto de praticar corrida, andar e bicileta e fazer academia, além de cantar e desenhar.
+              Na verdade, faço de tudo um pouco, mesmo que não seja o melhor. Acredito que bom mesmo é experimentar.
+              Por isso, me considero um
               <span className="text-dark-highlight font-bold">
                 {" "}
                 experimentador da vida

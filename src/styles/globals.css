@@ -11,3 +11,6 @@
     @apply text-dark-text;; /* Define a cor dos dots ativos como branca */
   }
   
+  .flex-important {
+    display: flex !important;
+  }
