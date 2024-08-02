@@ -19,6 +19,8 @@ import CarouselImage8 from "./foto-carrossel8.jpeg";
 import CarouselImage9 from "./foto-carrossel9.jpeg";
 import CarouselImage10 from "./foto-carrossel10.jpeg";
 import CarouselImage11 from "./foto-carrossel11.jpeg";
+import EmailIcon from "./email.svg";
+import PhoneIcone from "./phone.svg";
 
 export {
   LogoDark,
@@ -42,4 +44,6 @@ export {
   CarouselImage9,
   CarouselImage10,
   CarouselImage11,
+  EmailIcon,
+  PhoneIcone
 };

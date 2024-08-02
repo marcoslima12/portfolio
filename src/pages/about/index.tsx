@@ -88,8 +88,8 @@ const About = ({ dot }: SliderTypes) => {
               <br />
               Natural de Timbaúba, interior de Pernambuco, sou fã de música e
               apaixonado por conexões e experiências. 
-              Gosto de praticar corrida, andar e bicileta e fazer academia, além de cantar e desenhar.
-              Na verdade, faço de tudo um pouco, mesmo que não seja o melhor. Acredito que bom mesmo é experimentar.
+              Gosto de praticar corrida, andar e bicicleta e fazer academia, além de cantar e desenhar.
+              Na verdade, faço de tudo um pouco, mesmo que não seja o melhor naquilo. Acredito que bom mesmo é experimentar.
               Por isso, me considero um
               <span className="text-dark-highlight font-bold">
                 {" "}

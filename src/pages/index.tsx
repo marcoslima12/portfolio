@@ -168,12 +168,13 @@ export default function Home() {
               a sociedade.
             </p>
             <div className="w-1/2 flex items-start justify-start gap-5">
-              <button
-                onClick={() => router.push("/contact")}
-                className="w-32 bg-dark-highlight h-9 rounded-2xl text-dark-primary hover:text-dark-text transition-all"
+              <a
+                href="/CURRÍCULO-2024.pdf"
+                download
+                className="w-32 bg-dark-highlight h-9 rounded-2xl text-dark-primary hover:text-dark-text transition-all flex justify-center items-center"
               >
-                Fala comigo
-              </button>
+                Meu currículo
+              </a>
 
               <Link
                 href={"https://www.linkedin.com/in/marcos-antonio-vital-lima/"}
