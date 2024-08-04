@@ -14,3 +14,7 @@
   .flex-important {
     display: flex !important;
   }
+
+  .text-highlight-important {
+    @apply text-light-highlight !important;
+  }

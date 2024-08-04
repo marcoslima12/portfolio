@@ -29,9 +29,9 @@ export const Header = () => {
     return (
       <Link href={link}>
         <span
-          className={`dark:text-light-primary dark:hover:text-light-highlight text-lg font-medium text-light-highlight hover:text-light-text transition-all border-l-4 pl-2 ${
+          className={`text-lg font-medium text-light-text hover:text-light-highlight transition-all border-l-4 pl-2 dark:text-light-primary dark:hover:text-light-highlight ${
             currentPath === link
-              ? "border-light-text  text-light-text dark:text-dark-highlight dark:border-dark-highlight"
+              ? "border-light-highlight text-highlight-important dark:text-highlight-important dark:border-dark-highlight"
               : "border-transparent"
           }`}
         >
