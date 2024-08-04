@@ -1,11 +1,13 @@
 import LogoDark from "./dark 2.svg";
-import LogoLight from './logolight.svg';
+import LogoLight from "./logolight.svg";
 import ThemeIconDark from "./themeicondark.svg";
 import ThemeIconLight from "./themeiconlight.svg";
 import LanguageIconDark from "./langicondark.svg";
 import LanguageIconLight from "./langiconlight.svg";
-import LinkedIn from "./linkedin.svg";
-import Github from "./github.svg";
+import LinkedInDark from "./linkedInDark.svg";
+import LinkedInLight from "./linkedInLight.svg";
+import GithubDark from "./githubDark.svg";
+import GithubLight from "./githubLight.svg";
 import ProfilePic from "./profilepic.svg";
 import CarouselImage from "./carimage.svg";
 import CarouselImage1 from "./foto-carrossel1.jpeg";
@@ -29,8 +31,10 @@ export {
   LanguageIconLight,
   ThemeIconDark,
   ThemeIconLight,
-  Github,
-  LinkedIn,
+  GithubDark,
+  GithubLight,
+  LinkedInDark,
+  LinkedInLight,
   ProfilePic,
   CarouselImage,
   CarouselImage1,
@@ -45,5 +49,5 @@ export {
   CarouselImage10,
   CarouselImage11,
   EmailIcon,
-  PhoneIcone
+  PhoneIcone,
 };

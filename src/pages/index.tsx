@@ -1,5 +1,12 @@
 import { useEffect, useState, useMemo, ReactNode, useCallback } from "react";
-import { Github, LinkedIn, ProfilePic } from "@/assets";
+import {
+  LinkedInDark,
+  LanguageIconLight,
+  ProfilePic,
+  LinkedInLight,
+  GithubDark,
+  GithubLight,
+} from "@/assets";
 import { Header } from "@/components";
 import { roboto } from "@/styles/fonts/fonts";
 import Image from "next/image";
@@ -7,6 +14,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { SectionTitle } from "@/components/SectionTitle";
 import { SectionWrapper } from "@/components/SectionWrapper";
+import { useTheme } from "@/contexts/themeContext";
 
 export default function Home() {
   const router = useRouter();
@@ -56,15 +64,15 @@ export default function Home() {
   }
 
   const TimeForExperience = ({ time }: TimeExperencieProps) => {
-    return <h3 className="text-sm">{time}</h3>;
+    return <h3 className="text-sm text-light-text dark:text-dark-text">{time}</h3>;
   };
 
   const TitleForExperience = ({ title }: TitleExperencieProps) => {
-    return <h3 className="text-xl font-bold">{title}</h3>;
+    return <h3 className="text-xl font-bold text-light-text dark:text-dark-text">{title}</h3>;
   };
 
   const LocationForExperience = ({ localation }: LocationExperencieProps) => {
-    return <h3 className="text-base">{localation}</h3>;
+    return <h3 className="text-base text-light-text dark:text-dark-text">{localation}</h3>;
   };
 
   const WorkExperience = ({
@@ -87,9 +95,9 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <p className="w-1/3">{about}</p>
+          <p className="w-1/3 text-light-text dark:text-dark-text">{about}</p>
         </div>
-        <hr />
+        <hr className="border-light-text dark:border-dark-text" />
       </div>
     );
   };
@@ -105,7 +113,7 @@ export default function Home() {
         <TimeForExperience time={time} />
         <TitleForExperience title={title} />
         <LocationForExperience localation={location} />
-        <h3 className="text-sm">{note}</h3>
+        <h3 className="text-sm text-light-text dark:text-dark-text">{note}</h3>
       </div>
     );
   };
@@ -116,7 +124,7 @@ export default function Home() {
   }
   const Project = ({ tasks, title }: ProjectProps) => {
     return (
-      <div className="flex flex-col gap-2 w-1/4 flex-auto max-w-96">
+      <div className="flex flex-col gap-2 w-1/4 flex-auto max-w-96 text-light-text dark:text-dark-text">
         <TitleForExperience title={title} />
         <ul className="flex flex-col gap-2">
           {tasks.map((task, index) => {
@@ -148,17 +156,19 @@ export default function Home() {
     return () => clearInterval(intervalId);
   }, [changeSkillText]);
 
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <>
+    <div className="bg-light-primary dark:bg-dark-primary">
       <Header />
       <SectionWrapper>
         <div className="w-3/4 flex items-center justify-between mt-36">
           <div className="w-1/2 gap-9 flex flex-col justify-around items-start">
-            <h1 className="text-2xl">
+            <h1 className="text-2xl text-light-text dark:text-light-primary">
               Desenvolvedor Frontend | React | Next.js | Typescript | Scrum
               Master | Analista de Projetos | Pós Junior
             </h1>
-            <p className="text-xl">
+            <p className="text-xl text-light-text dark:text-light-primary">
               Oii. Tudo bem? Me chamo Marcos, mas pode me chamar de Marcante!
               <br />
               <br />
@@ -178,18 +188,24 @@ export default function Home() {
 
               <Link
                 href={"https://www.linkedin.com/in/marcos-antonio-vital-lima/"}
-                className="border-2 rounded-3xl p-2"
+                className="border-2 border-light-text dark:border-dark-text rounded-3xl p-2"
                 target="_blank"
               >
-                <Image src={LinkedIn} alt="ícone do linkedin" />
+                <Image
+                  src={theme === "dark" ? LinkedInDark : LinkedInLight}
+                  alt="ícone do linkedin"
+                />
               </Link>
 
               <Link
-                className="border-2 rounded-3xl p-2"
+                className="border-2 border-light-text dark:border-dark-text rounded-3xl p-2"
                 href={"https://github.com/marcoslima12"}
                 target="_blank"
               >
-                <Image src={Github} alt="ícone do github" />
+                <Image
+                  src={theme === "dark" ? GithubDark : GithubLight}
+                  alt="ícone do github"
+                />
               </Link>
             </div>
           </div>
@@ -199,11 +215,11 @@ export default function Home() {
 
       <SectionWrapper>
         <div className="flex items-center flex-col justify-normal gap-3">
-          <h1 className="text-4xl">
+          <h1 className="text-4xl text-light-text dark:text-dark-text">
             &lt;Um desenvolvedor{" "}
             <span className="text-dark-highlight">{currentText}</span> /&gt;
           </h1>
-          <p className="w-1/3 text-center text-xl">
+          <p className="w-1/3 text-center text-xl text-light-text dark:text-dark-text">
             Além de habilidades técnicas, trago em minha bagagem diversas
             habilidades interpessoais, como <SoftSkill text="boa comunicação" />
             , <SoftSkill text="liderança eficaz" /> ,{" "}
@@ -314,6 +330,7 @@ export default function Home() {
           />{" "}
         </div>
       </SectionWrapper>
+
       <SectionWrapper>
         <div className="w-3/4 flex flex-col items-start justify-center gap-1">
           <SectionTitle title="Jornada Acadêmica" />
@@ -330,6 +347,7 @@ export default function Home() {
           />
         </div>
       </SectionWrapper>
+
       <SectionWrapper>
         <div className="w-3/4 flex flex-col">
           <SectionTitle title="Projetos que já desenvolvi" />
@@ -381,6 +399,6 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapper>
-    </>
+    </div>
   );
 }
