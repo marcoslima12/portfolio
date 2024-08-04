@@ -1,5 +1,6 @@
-import { LinkedInDark, LanguageIconLight, ProfilePic, LinkedInLight, EmailIconDark, EmailIconLight, PhoneDark, PhoneLight } from "@/assets";
+import { LinkedInDark, LanguageIconLight, ProfilePic, LinkedInLight, EmailIconDark, EmailIconLight, PhoneDark, PhoneLight, CarouselImage5 } from "@/assets";
 import { Header } from "@/components";
+import { ImageProfile } from "@/components/ProfileImage";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { useTheme } from "@/contexts/themeContext";
 import Image, { StaticImageData } from "next/image";
@@ -52,12 +53,12 @@ const Contact = () => {
               />
             </div>
           </div>
-          <Image src={ProfilePic} alt="Foto de perfil de Marcos Antonio" />
+          <ImageProfile image={CarouselImage5} />
         </div>
       </SectionWrapper>
       <span className="text-sm mb-3 text-light-text dark:text-dark-text">
         {" "}
-        &lt; made with love by{" "}
+        &lt;feito por{" "}
         <span className="text-dark-highlight">Marcante</span> /&gt;
       </span>
     </div>

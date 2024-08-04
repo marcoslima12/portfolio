@@ -6,134 +6,29 @@ import {
   LinkedInLight,
   GithubDark,
   GithubLight,
+  CarouselImage4,
+  CarouselImage5,
+  GoToDark,
+  GoToLight,
 } from "@/assets";
 import { Header } from "@/components";
 import { roboto } from "@/styles/fonts/fonts";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { SectionTitle } from "@/components/SectionTitle";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { useTheme } from "@/contexts/themeContext";
+import { PortfolioLink } from "@/components/PortfolioLink";
+import { ImageProfile } from "@/components/ProfileImage";
+import { Project } from "@/components/Project";
+import { SoftSkill } from "@/components/SoftSkill";
+import { WorkExperience } from "@/components/Work";
+import { EducationalExperience } from "@/components/Educational";
 
 export default function Home() {
   const router = useRouter();
   const [currentText, setCurrentText] = useState("criativo");
-
-  interface SoftSkillProp {
-    text: string;
-  }
-
-  interface HardSkillProps {
-    skill: string;
-  }
-
-  const SoftSkill = ({ text }: SoftSkillProp) => {
-    return <span className="font-bold">{text}</span>;
-  };
-
-  const HardSkill = ({ skill }: HardSkillProps) => {
-    return <span className="text-base text-dark-highlight">{skill}</span>;
-  };
-
-  interface WorkExperienceProps {
-    time: string;
-    role: string;
-    company: string;
-    about: string;
-    skills: string[];
-  }
-
-  interface TimeExperencieProps {
-    time: string;
-  }
-
-  interface TitleExperencieProps {
-    title: string;
-  }
-
-  interface LocationExperencieProps {
-    localation: string;
-  }
-
-  interface EducationalExperienceProps {
-    title: string;
-    time: string;
-    location: string;
-    note?: string;
-  }
-
-  const TimeForExperience = ({ time }: TimeExperencieProps) => {
-    return <h3 className="text-sm text-light-text dark:text-dark-text">{time}</h3>;
-  };
-
-  const TitleForExperience = ({ title }: TitleExperencieProps) => {
-    return <h3 className="text-xl font-bold text-light-text dark:text-dark-text">{title}</h3>;
-  };
-
-  const LocationForExperience = ({ localation }: LocationExperencieProps) => {
-    return <h3 className="text-base text-light-text dark:text-dark-text">{localation}</h3>;
-  };
-
-  const WorkExperience = ({
-    about,
-    company,
-    role,
-    time,
-    skills,
-  }: WorkExperienceProps) => {
-    return (
-      <div className="mb-8">
-        <div className="w-full flex justify-between pb-4">
-          <div className="w-1/3 flex flex-col justify-start items-start">
-            <TimeForExperience time={time} />
-            <TitleForExperience title={role} />
-            <LocationForExperience localation={company} />
-            <div className="flex justify-start flex-wrap items-center gap-2">
-              {skills.map((skill, index) => (
-                <HardSkill key={index} skill={skill} />
-              ))}
-            </div>
-          </div>
-          <p className="w-1/3 text-light-text dark:text-dark-text">{about}</p>
-        </div>
-        <hr className="border-light-text dark:border-dark-text" />
-      </div>
-    );
-  };
-
-  const EducationalExperience = ({
-    location,
-    time,
-    title,
-    note,
-  }: EducationalExperienceProps) => {
-    return (
-      <div className="pb-6">
-        <TimeForExperience time={time} />
-        <TitleForExperience title={title} />
-        <LocationForExperience localation={location} />
-        <h3 className="text-sm text-light-text dark:text-dark-text">{note}</h3>
-      </div>
-    );
-  };
-
-  interface ProjectProps {
-    title: string;
-    tasks: string[];
-  }
-  const Project = ({ tasks, title }: ProjectProps) => {
-    return (
-      <div className="flex flex-col gap-2 w-1/4 flex-auto max-w-96 text-light-text dark:text-dark-text">
-        <TitleForExperience title={title} />
-        <ul className="flex flex-col gap-2">
-          {tasks.map((task, index) => {
-            return <li key={index}>{task}</li>;
-          })}
-        </ul>
-      </div>
-    );
-  };
 
   const changeSkillText = useCallback(() => {
     const softSkills = [
@@ -186,30 +81,19 @@ export default function Home() {
                 Meu currículo
               </a>
 
-              <Link
+              <PortfolioLink
                 href={"https://www.linkedin.com/in/marcos-antonio-vital-lima/"}
-                className="border-2 border-light-text dark:border-dark-text rounded-3xl p-2"
-                target="_blank"
-              >
-                <Image
-                  src={theme === "dark" ? LinkedInDark : LinkedInLight}
-                  alt="ícone do linkedin"
-                />
-              </Link>
-
-              <Link
-                className="border-2 border-light-text dark:border-dark-text rounded-3xl p-2"
+                alt="ícone do Linkedin"
+                icons={[LinkedInDark, LinkedInLight]}
+              />
+              <PortfolioLink
                 href={"https://github.com/marcoslima12"}
-                target="_blank"
-              >
-                <Image
-                  src={theme === "dark" ? GithubDark : GithubLight}
-                  alt="ícone do github"
-                />
-              </Link>
+                alt="ícone do Github"
+                icons={[GithubDark, GithubLight]}
+              />
             </div>
           </div>
-          <Image src={ProfilePic} alt="Foto de perfil de Marcos Antonio" />
+          <ImageProfile image={CarouselImage5} />
         </div>
       </SectionWrapper>
 
@@ -245,6 +129,7 @@ export default function Home() {
             guiando o time a seguir os princípios ágeis do Scrum, além de colaborar fortemente na gestão do backlog.
           "
             company="LIVE (Laboratório para Cidades Inteligentes)"
+            link="https://portal.cin.ufpe.br/pessoas-e-grupos/grupos-e-associacoes/live/"
             role="Desenvolvedor Frontend | Scrum Master"
             time="Abril de 2024 até o momento"
             skills={[
@@ -287,6 +172,7 @@ export default function Home() {
             Minha atuação se estendeu à coordenação dos escopos, prazos e entregáveis, em estreita colaboração com os clientes e o time, 
             com o objetivo de assegurar não apenas uma experiência de alta qualidade, mas também resultados excepcionais"
             company="CITi (Centro Integrado de Tecnologia da Informação)"
+            link="https://citi.org.br/"
             role="Gerente de Software"
             time="Dezembro de 2022 até dezembro de 2023"
             skills={[
@@ -314,6 +200,7 @@ export default function Home() {
                   combinando criatividade e conhecimento técnico de maneira
                   eficaz."
             company="CITi (Centro Integrado de Tecnologia da Informação)"
+            link="https://citi.org.br/"
             role="Desenvolvedor Fullstack"
             time="Julho de 2022 até dezembro de 2022"
             skills={[
@@ -357,10 +244,11 @@ export default function Home() {
                 "Implementei a emissão de certificados em PDF após conclusão de um curso interno.",
               ]}
               title="CITi+"
+              link="https://citiplus.citistaging.com/"
             />
             <Project
               tasks={[
-                "Desenvolvi aplicação web para gerenciamento de cursos e disciplinas.",
+                "Desenvolvi aplicação privada web para gerenciamento de cursos e disciplinas.",
                 "Implementei acompanhamento de estudantes baseado em seus desempenhos, contendo comparativos e rankings, além de diversas outras métricas.",
                 "Contribui na implementação de um gerador de questões por assunto utilizando Gemini do Google.",
               ]}
@@ -368,25 +256,27 @@ export default function Home() {
             />
             <Project
               tasks={[
-                "Desenvolvi uma aplicação web fullstack voltada pra conexão entre compradores, corretores e imobiliária.",
+                "Desenvolvi uma aplicação web fullstack privada voltada pra conexão entre compradores, corretores e imobiliária.",
               ]}
               title="Web Imóveis"
             />
             <Project
               tasks={[
-                "Desenvolvi aplicativo com Flutter.",
+                "Desenvolvi aplicativo pessoal com Flutter.",
                 "Autenticação social com Google no Firebase.",
                 "Google ML Kit para escanear código de barras de boletos.",
               ]}
               title="Payflow"
+              link="https://github.com/marcoslima12/payflow"
             />
             <Project
               tasks={[
-                "Desenvolvi aplicação web utilizando Next.Js.",
+                "Desenvolvi aplicação web pessoal utilizando Next.Js.",
                 "Utilização de Server Side Rendering para consumo de dados e informações.",
                 "Simulador de compra de produto utilizando o modo Teste do Stripe.",
               ]}
               title="Next.Js Shop"
+              link="https://github.com/marcoslima12/Ignite-Shop"
             />
             <Project
               tasks={[
@@ -395,6 +285,7 @@ export default function Home() {
                 "Simulação de servidor com Json Server.",
               ]}
               title="Redux Video Classes"
+              link="https://github.com/marcoslima12/react-redux-zustand/tree/player"
             />
           </div>
         </div>

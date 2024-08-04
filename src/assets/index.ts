@@ -25,6 +25,8 @@ import EmailIconDark from "./emailDark.svg";
 import EmailIconLight from './emailLight.svg';
 import PhoneDark from "./phoneDark.svg";
 import PhoneLight from "./phoneLight.svg";
+import GoToDark from './goToDark.svg'; 
+import GoToLight from './goToLight.svg'; 
 
 export {
   LogoDark,
@@ -53,5 +55,7 @@ export {
   EmailIconDark,
   EmailIconLight,
   PhoneDark,
-  PhoneLight
+  PhoneLight,
+  GoToDark,
+  GoToLight
 };
