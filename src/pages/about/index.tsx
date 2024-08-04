@@ -4,9 +4,6 @@ import Slider from "react-slick";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import {
-  Car1,
-  Car2,
-  Car3,
   CarouselImage,
   CarouselImage1,
   CarouselImage10,
@@ -20,8 +17,7 @@ import {
   CarouselImage8,
   CarouselImage9,
   LogoDark,
-  ProfilePic,
-  ThemeIcon,
+  ProfilePic
 } from "@/assets";
 import { ReactNode } from "react";
 
@@ -40,7 +36,7 @@ const About = ({ dot }: SliderTypes) => {
     arrows: false,
     centerPadding: "70px",
     appendDots: (dots: ReactNode) => (
-      <div className="w-3 h-3 bg-white rounded-full">{dots}</div>
+      <div className="w-3 h-3 bg-white dark:bg-black rounded-full">{dots}</div>
     ),
   };
 
@@ -59,7 +55,7 @@ const About = ({ dot }: SliderTypes) => {
   ];
 
   return (
-    <>
+    <div className="bg-light-primary dark:bg-dark-primary h-screen">
       <Header />
       <SectionWrapper>
         <div className="w-full flex items-center justify-center gap-32 mt-56">
@@ -80,8 +76,8 @@ const About = ({ dot }: SliderTypes) => {
           </div>
 
           <div className="flex flex-col w-80 gap-10">
-            <h1 className="text-7xl font-bold text-left">Quem sou eu?</h1>
-            <p className="text-xl">
+            <h1 className="text-7xl font-bold text-left text-light-text dark:text-dark-text">Quem sou eu?</h1>
+            <p className="text-xl text-light-text dark:text-dark-text">
               Também chamado de{" "}
               <span className="text-dark-highlight font-bold">Marcante</span>,
               sou filho de Antônio e Rosineide.
@@ -100,7 +96,7 @@ const About = ({ dot }: SliderTypes) => {
           </div>
         </div>
       </SectionWrapper>
-    </>
+    </div>
   );
 };
 

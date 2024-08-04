@@ -4,11 +4,11 @@
   
 /* Estilos para dots do react-slick */
 .slick-dots li button:before {
-    @apply text-dark-text; /* Define a cor dos dots como branca */
+    @apply text-dark-text; 
   }
   
   .slick-dots li.slick-active button:before {
-    @apply text-dark-text;; /* Define a cor dos dots ativos como branca */
+    @apply text-dark-text; 
   }
   
   .flex-important {
