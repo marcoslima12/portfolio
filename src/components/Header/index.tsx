@@ -65,11 +65,11 @@ export const Header = () => {
               icon={theme === "dark" ? ThemeIconDark : ThemeIconLight}
               onClick={() => toggleTheme()}
             />
-            <IconButtonComponent
+           {/*  <IconButtonComponent
               alt="Botão para mudar o idioma entre português e inglês"
               icon={theme == "dark" ? LanguageIconDark : LanguageIconLight}
               onClick={() => console.log("Mudar o idioma")}
-            />
+            /> */}
           </div>
         </div>
       </div>

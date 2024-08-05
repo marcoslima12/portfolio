@@ -1,4 +1,4 @@
-import { LinkedInDark, LanguageIconLight, ProfilePic, LinkedInLight, EmailIconDark, EmailIconLight, PhoneDark, PhoneLight, CarouselImage5 } from "@/assets";
+import { LinkedInDark, LanguageIconLight, ProfilePic, LinkedInLight, EmailIconDark, EmailIconLight, PhoneDark, PhoneLight, CarouselImage5, ProfileContact } from "@/assets";
 import { Header } from "@/components";
 import { ImageProfile } from "@/components/ProfileImage";
 import { SectionWrapper } from "@/components/SectionWrapper";
@@ -53,7 +53,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <ImageProfile image={CarouselImage5} />
+          <ImageProfile image={ProfileContact} />
         </div>
       </SectionWrapper>
       <span className="text-sm mb-3 text-light-text dark:text-dark-text">

@@ -9,6 +9,7 @@ import LinkedInLight from "./linkedInLight.svg";
 import GithubDark from "./githubDark.svg";
 import GithubLight from "./githubLight.svg";
 import ProfilePic from "./profilepic.svg";
+import ProfileContact from  './contactprofile.jpeg';
 import CarouselImage from "./carimage.svg";
 import CarouselImage1 from "./foto-carrossel1.jpeg";
 import CarouselImage2 from "./foto-carrossel2.jpeg";
@@ -57,5 +58,6 @@ export {
   PhoneDark,
   PhoneLight,
   GoToDark,
-  GoToLight
+  GoToLight,
+  ProfileContact
 };
