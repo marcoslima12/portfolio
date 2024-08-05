@@ -1,20 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
-/* Estilos para dots do react-slick */
-.slick-dots li button:before {
-    @apply text-dark-text; 
-  }
-  
-  .slick-dots li.slick-active button:before {
-    @apply text-dark-text; 
-  }
-  
-  .flex-important {
-    display: flex !important;
-  }
 
-  .text-highlight-important {
-    @apply text-light-highlight !important;
-  }
+.slick-dots li button:before {
+  @apply text-light-text;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-light-text;
+}
+
+.dark .slick-dots li button:before {
+  @apply text-dark-text;
+}
+
+.dark .slick-dots li.slick-active button:before {
+  @apply text-dark-text;
+}
+
+.flex-important {
+  display: flex !important;
+}
+
+.text-highlight-important {
+  @apply text-light-highlight !important;
+}

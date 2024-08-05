@@ -16,8 +16,6 @@ import {
   CarouselImage7,
   CarouselImage8,
   CarouselImage9,
-  LogoDark,
-  ProfilePic
 } from "@/assets";
 import { ReactNode } from "react";
 
@@ -26,6 +24,7 @@ type SliderTypes = {
 };
 
 const About = ({ dot }: SliderTypes) => {
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -36,7 +35,7 @@ const About = ({ dot }: SliderTypes) => {
     arrows: false,
     centerPadding: "70px",
     appendDots: (dots: ReactNode) => (
-      <div className="w-3 h-3 bg-white dark:bg-black rounded-full">{dots}</div>
+      <div className="w-3 h-3 rounded-full dark:dark">{dots}</div>
     ),
   };
 
