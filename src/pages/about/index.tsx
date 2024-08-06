@@ -53,9 +53,9 @@ const About = ({ dot }: SliderTypes) => {
   ];
 
   return (
-    <div className="bg-light-primary h-screen dark:bg-dark-primary  border-2 ">
+    <div className="bg-light-primary h-screen dark:bg-dark-primary">
       <Header />
-      <div className="w-full h-full flex items-center justify-center gap-32 border-2">
+      <div className="w-full h-full flex items-center justify-center gap-32">
         <div className="w-1/3 ">
           <Slider
             className="rounded-lg flex flex-col justify-center"
