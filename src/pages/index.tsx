@@ -119,7 +119,8 @@ export default function Home() {
         <div className="w-3/4 flex flex-col items-start justify-center">
           <SectionTitle title="Experiências Profissionais" />
           <WorkExperience
-            about="Sou responsável pelo desenvolvimento frontend dos projetos utilizando tecnologias como React, React Native e Flutter.
+            about="Sou responsável pelo desenvolvimento frontend dos projetos utilizando tecnologias como React, React Native e Flutter, 
+            implementado interfaces que garantem uma ótima experiência ao usuário.
             Participo da construção das soluções, estando presente ativamente desde as etapas mais inicias do projeto e do produto, 
             como na definição de stack, arquitetura da aplicação, elicitação de requisitos e criação de User Stories.
             Também, realizo testes de usabilidade do protótipo e as diferentes validações necessárias com os stakeholders.
@@ -159,18 +160,18 @@ export default function Home() {
               "Chackra UI",
               "SOLID",
               "Firebase",
-              "",
+              "Firestore"
             ]}
           />{" "}
           <WorkExperience
             about="Fui responsável por buscar garantir o sucesso do desenvolvimento de software através da elaboração e gestão do backlog 
             de atividades e na supervisão contínua de todas as etapas deste processo. 
-            Minha abordagem se baseu em metodologias ágeis como Scrum e Kanban, o que me permitiu coordenar as equipes de forma eficaz.
+            Minha abordagem se baseou em metodologias ágeis como Scrum e Kanban, o que me permitiu coordenar as equipes de forma eficaz.
             Além disso, era apoio técnico para o squad, garantindo que desafios fossem superados e que as melhores práticas fossem seguidas
             ao longo do desenvolvimento. 
             
-            Minha atuação se estendeu à coordenação dos escopos, prazos e entregáveis, em estreita colaboração com os clientes e o time, 
-            com o objetivo de assegurar não apenas uma experiência de alta qualidade, mas também resultados excepcionais"
+            Minha atuação se estendeu a coordenação dos escopos, prazos e entregáveis, em estreita colaboração com os clientes e o time, 
+            com o objetivo de assegurar não apenas uma experiência de alta qualidade, mas também resultados excepcionais."
             company="CITi (Centro Integrado de Tecnologia da Informação)"
             link="https://citi.org.br/"
             role="Gerente de Software"
@@ -264,7 +265,7 @@ export default function Home() {
               tasks={[
                 "Desenvolvi aplicativo pessoal com Flutter.",
                 "Autenticação social com Google no Firebase.",
-                "Google ML Kit para escanear código de barras de boletos.",
+                "Escaneador de código de barras de boletos.",
               ]}
               title="Payflow"
               link="https://github.com/marcoslima12/payflow"
@@ -280,7 +281,7 @@ export default function Home() {
             />
             <Project
               tasks={[
-                "Projeto de curso para aprofundamento em gestão de estados no React.",
+                "Projeto pessoal para aprofundamento em gestão de estados no React.",
                 "Utilização de Redux para gerenciar o estado da aplicação",
                 "Simulação de servidor com Json Server.",
               ]}
