@@ -57,8 +57,8 @@ export default function Home() {
     <div className="bg-light-primary dark:bg-dark-primary">
       <Header />
       <SectionWrapper>
-        <div className="w-3/4 flex items-center justify-between mt-36">
-          <div className="w-1/2 gap-9 flex flex-col justify-around items-start">
+        <div className="w-3/4 flex items-center justify-between mt-20 lg:mt-36 ">
+          <div className="lg:w-1/2 gap-9 flex flex-col justify-around items-center lg:items-start">
             <h1 className="text-2xl text-light-text dark:text-light-primary">
               Desenvolvedor Frontend | React | Next.js | Typescript | Scrum
               Master | Analista de Projetos | Pós Junior
@@ -72,7 +72,7 @@ export default function Home() {
               problemas, aprimorando processos e impactando pessoas, contextos e
               a sociedade.
             </p>
-            <div className="w-1/2 flex items-start justify-start gap-5">
+            <div className="lg:w-1/2 w-full flex items-start justify-around lg:justify-start gap-5">
               <a
                 href="/CURRÍCULO-2024.pdf"
                 download
@@ -160,7 +160,7 @@ export default function Home() {
               "Chackra UI",
               "SOLID",
               "Firebase",
-              "Firestore"
+              "Firestore",
             ]}
           />{" "}
           <WorkExperience
