@@ -22,8 +22,8 @@ export const WorkExperience = ({
   }: WorkExperienceProps) => {
     return (
       <div className="mb-8">
-        <div className="w-full flex justify-between pb-4">
-          <div className="w-1/2 flex flex-col justify-start items-start">
+        <div className="w-full flex-col lg:flex lg:flex-row justify-between pb-4">
+          <div className="lg:w-1/2 flex flex-col justify-start items-start">
             <TimeForExperience time={time} />
             <TitleForExperience title={role} />
             <LocationForExperience link={link} localation={company} />
@@ -38,7 +38,7 @@ export const WorkExperience = ({
               ))}
             </div>
           </div>
-          <p className="w-1/3 text-light-text dark:text-dark-text">{about}</p>
+          <p className="lg:w-1/3 text-light-text dark:text-dark-text">{about}</p>
         </div>
         <hr className="border-light-text dark:border-dark-text" />
       </div>

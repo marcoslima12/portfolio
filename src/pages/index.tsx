@@ -239,7 +239,7 @@ export default function Home() {
       <SectionWrapper>
         <div className="w-3/4 flex flex-col">
           <SectionTitle title="Projetos que já desenvolvi" />
-          <div className="flex justify-start items-start gap-24 flex-wrap">
+          <div className="flex justify-start items-start gap-8 lg:gap-24 flex-wrap">
             <Project
               tasks={[
                 "Implementei a emissão de certificados em PDF após conclusão de um curso interno.",

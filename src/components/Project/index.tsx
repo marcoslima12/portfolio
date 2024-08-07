@@ -13,7 +13,7 @@ export const Project = ({ tasks, title, link }: ProjectProps) => {
   const { theme } = useTheme();
 
   return (
-    <div className="flex flex-col gap-2 w-1/4 flex-auto max-w-96 text-light-text dark:text-dark-text">
+    <div className="flex flex-col gap-2 lg:w-1/4 flex-auto max-w-96 text-light-text dark:text-dark-text">
       <a target="_blank" href={link} className="flex justify-start">
         <TitleForExperience title={title} />
         {link && (
