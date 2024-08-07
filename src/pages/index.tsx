@@ -98,12 +98,12 @@ export default function Home() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="flex items-center flex-col justify-normal gap-3">
-          <h1 className="text-4xl text-light-text dark:text-dark-text">
+        <div className="flex items-center text-center flex-col justify-normal gap-3">
+          <h1 className="pb-6 lg:pb-0 text-2xl lg:text-4xl text-light-text dark:text-dark-text">
             &lt;Um desenvolvedor{" "}
             <span className="text-dark-highlight">{currentText}</span> /&gt;
           </h1>
-          <p className="w-1/3 text-center text-xl text-light-text dark:text-dark-text">
+          <p className=" px-4 lg:px-0 lg:w-1/3 text-center text-xl text-light-text dark:text-dark-text">
             Além de habilidades técnicas, trago em minha bagagem diversas
             habilidades interpessoais, como <SoftSkill text="boa comunicação" />
             , <SoftSkill text="liderança eficaz" /> ,{" "}
