@@ -53,9 +53,9 @@ const About = ({ dot }: SliderTypes) => {
   ];
 
   return (
-    <div className="bg-light-primary h-screen dark:bg-dark-primary">
+    <div className="bg-light-primary lg:h-screen dark:bg-dark-primary">
       <Header />
-      <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-32">
+      <div className="w-full lg:h-full flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-32">
         <div className="w-full lg:w-1/3 pt-24 lg:pt-0">
           <Slider
             className="rounded-lg flex flex-col justify-center"
@@ -70,7 +70,7 @@ const About = ({ dot }: SliderTypes) => {
                   <Image
                     src={image}
                     alt="Foto do carrosel"
-                    className="rounded-lg w-auto max-w-64 lg:max-w-none h-[350px] lg:h-[500px] box-border shadow shadow-dark-primary"
+                    className="rounded-lg w-auto max-w-64 lg:max-w-[480px] h-[350px] lg:h-[500px] box-border shadow shadow-dark-primary"
                   />
                 </div>
               );
