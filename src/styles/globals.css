@@ -25,3 +25,9 @@
 .text-highlight-important {
   @apply text-light-highlight !important;
 }
+
+@media (max-width: 640px) {
+  .slick-dots {
+    display: none;
+  }
+}

@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 interface Props {
   width?: number | string;
   height?: number | string;

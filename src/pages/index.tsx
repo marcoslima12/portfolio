@@ -25,6 +25,8 @@ import { Project } from "@/components/Project";
 import { SoftSkill } from "@/components/SoftSkill";
 import { WorkExperience } from "@/components/Work";
 import { EducationalExperience } from "@/components/Educational";
+import { LinkedIn } from "@/components/Icons/LinkedIn";
+import { Github } from "@/components/Icons/Github";
 
 export default function Home() {
   const router = useRouter();
@@ -84,12 +86,12 @@ export default function Home() {
               <PortfolioLink
                 href={"https://www.linkedin.com/in/marcos-antonio-vital-lima/"}
                 alt="ícone do Linkedin"
-                icons={[LinkedInDark, LinkedInLight]}
+                icon={<LinkedIn fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
               />
               <PortfolioLink
                 href={"https://github.com/marcoslima12"}
                 alt="ícone do Github"
-                icons={[GithubDark, GithubLight]}
+                icon={<Github fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
               />
             </div>
           </div>

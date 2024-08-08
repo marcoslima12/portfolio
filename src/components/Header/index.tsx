@@ -12,9 +12,10 @@ import { useRouter } from "next/router";
 import { IconButtonComponent } from "../IconButton";
 import { useTheme } from "@/contexts/themeContext";
 import { useEffect } from "react";
-import { Hamburguer } from "../Hamburguer";
 import { NavOp } from "../NavOp";
 import { useNav } from "@/contexts/navContext";
+import { Hamburguer } from "../Icons/Hamburguer";
+import { Light } from "../Icons/Light";
 
 export const Header = () => {
   const router = useRouter();
@@ -44,7 +45,7 @@ export const Header = () => {
           <div className="flex gap-8 ml-4">
             <IconButtonComponent
               alt="Botão para alternar o tema entre claro e escuro"
-              icon={theme === "dark" ? ThemeIconDark : ThemeIconLight}
+              icon={<Light fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
               onClick={() => toggleTheme()}
             />
           </div>
@@ -53,7 +54,7 @@ export const Header = () => {
           <div className=" flex items-center justify-center ml-6">
             <IconButtonComponent
               alt="Botão para alternar o tema entre claro e escuro"
-              icon={theme === "dark" ? ThemeIconDark : ThemeIconLight}
+              icon={<Light fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
               onClick={() => toggleTheme()}
             />
           </div>
