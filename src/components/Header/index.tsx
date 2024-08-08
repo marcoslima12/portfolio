@@ -24,7 +24,7 @@ export const Header = () => {
   const { isNavOpen, toggleNav } = useNav();
 
   return (
-    <header className="bg-light-primary dark:bg-dark-primary w-full h-20 lg:h-28  shadow-sm lg:shadow-lg shadow-light-highlight lg:shadow-light-highlight fixed z-10 ">
+    <header className="bg-light-primary dark:bg-dark-primary w-full h-16 lg:h-28  shadow-sm lg:shadow-lg shadow-light-highlight lg:shadow-light-highlight fixed z-10 ">
       <div className="container mx-auto flex items-center justify-between h-full p-6 lg:p-0">
         <Image
           src={theme === "dark" ? LogoDark : LogoLight}
@@ -80,49 +80,3 @@ export const Header = () => {
     </header>
   );
 };
-{
-  /* <header className=" bg-light-primary dark:bg-dark-primary w-full h-20 lg:h-32 shadow-lg shadow-light-highlight mb-36 fixed z-10">
-      <div className="container mx-auto flex items-center justify-between h-full p-5 lg:p-0">
-        <Image
-          src={theme === "dark" ? LogoDark : LogoLight}
-          alt="Logo MarcosAntonio marcante"
-          className="h-full"
-        />
-        <div className="hidden lg:flex items-center gap-9">
-          <nav className="flex items-center gap-12">
-            <NavOp currentPath={currentPath} link="/" pageName="Início" />
-            <NavOp currentPath={currentPath} link="/about" pageName="Sobre" />
-            <NavOp
-              currentPath={currentPath}
-              link="/contact"
-              pageName="Contato"
-            />
-          </nav>
-          <div className="flex gap-8 ml-4">
-            <IconButtonComponent
-              alt="Botão para alternar o tema entre claro e escuro"
-              icon={theme === "dark" ? ThemeIconDark : ThemeIconLight}
-              onClick={() => toggleTheme()}
-            />
-          </div>
-        </div>
-        <div className="lg:hidden">
-          <Hamburguer width={40} height={40} />
-        </div>
-      </div>
-      <div className="w-full h-auto bg-light-primary dark:bg-dark-primary lg:hidden">
-        <nav className="flex flex-col items-start justify-center gap-6">
-          <NavOp currentPath={currentPath} link="/" pageName="Início" />
-          <NavOp currentPath={currentPath} link="/about" pageName="Sobre" />
-          <NavOp currentPath={currentPath} link="/contact" pageName="Contato" />
-        </nav>
-        <div className="flex gap-8 ml-4">
-          <IconButtonComponent
-            alt="Botão para alternar o tema entre claro e escuro"
-            icon={theme === "dark" ? ThemeIconDark : ThemeIconLight}
-            onClick={() => toggleTheme()}
-          />
-        </div>
-      </div>
-    </header> */
-}
