@@ -20,7 +20,7 @@ export const EducationalExperience = ({
       <TimeForExperience time={time} />
       <TitleForExperience title={title} />
       <LocationForExperience localation={location} />
-      <h3 className="text-sm text-light-text dark:text-dark-text">{note}</h3>
+      <h3 className="text-xs lg:text-sm text-light-text dark:text-dark-text">{note}</h3>
     </div>
   );
 };

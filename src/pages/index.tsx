@@ -59,11 +59,11 @@ export default function Home() {
       <SectionWrapper>
         <div className="w-3/4 flex items-center justify-between mt-20 lg:mt-36 ">
           <div className="lg:w-1/2 gap-9 flex flex-col justify-around items-center lg:items-start">
-            <h1 className="text-2xl text-light-text dark:text-light-primary">
+            <h1 className="text-xl lg:text-2xl text-light-text dark:text-light-primary">
               Desenvolvedor Frontend | React | Next.js | Typescript | Scrum
               Master | Analista de Projetos | Pós Junior
             </h1>
-            <p className="text-xl text-light-text dark:text-light-primary">
+            <p className="text-base lg:text-xl text-light-text dark:text-light-primary text-center lg:text-start">
               Oii. Tudo bem? Me chamo Marcos, mas pode me chamar de Marcante!
               <br />
               <br />
@@ -99,11 +99,11 @@ export default function Home() {
 
       <SectionWrapper>
         <div className="flex items-center text-center flex-col justify-normal gap-3">
-          <h1 className="pb-6 lg:pb-0 text-2xl lg:text-4xl text-light-text dark:text-dark-text">
+          <h1 className="pb-6 lg:pb-0 text-xl lg:text-4xl text-light-text dark:text-dark-text">
             &lt;Um desenvolvedor{" "}
             <span className="text-dark-highlight">{currentText}</span> /&gt;
           </h1>
-          <p className=" px-4 lg:px-0 lg:w-1/3 text-center text-xl text-light-text dark:text-dark-text">
+          <p className="px-4 lg:px-0 lg:w-1/3 text-center text-base lg:text-xl text-light-text dark:text-dark-text">
             Além de habilidades técnicas, trago em minha bagagem diversas
             habilidades interpessoais, como <SoftSkill text="boa comunicação" />
             , <SoftSkill text="liderança eficaz" /> ,{" "}

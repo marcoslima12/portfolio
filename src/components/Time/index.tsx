@@ -4,6 +4,6 @@ interface TimeExperencieProps {
 
 export const TimeForExperience = ({ time }: TimeExperencieProps) => {
   return (
-    <h3 className="text-sm text-light-text dark:text-dark-text">{time}</h3>
+    <h3 className="text-xs lg:text-sm text-light-text dark:text-dark-text">{time}</h3>
   );
 };

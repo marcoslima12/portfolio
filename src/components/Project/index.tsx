@@ -25,7 +25,7 @@ export const Project = ({ tasks, title, link }: ProjectProps) => {
           />
         )}
       </a>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-2 text-sm">
         {tasks.map((task, index) => {
           return <li key={index}>{task}</li>;
         })}

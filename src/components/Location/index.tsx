@@ -14,7 +14,7 @@ export const LocationForExperience = ({
   const { theme } = useTheme();
   return (
     <a target="_blank" href={link} className="flex justify-start items-center">
-      <h3 className="text-base text-light-text dark:text-dark-text">
+      <h3 className="text-sm lg:text-base text-light-text dark:text-dark-text">
         {localation}
       </h3>
       {link && (
