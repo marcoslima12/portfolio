@@ -24,10 +24,10 @@ const Contact = () => {
   const {theme } = useTheme();
 
   return (
-    <div className=" bg-light-primary dark:bg-dark-primary w-full lg:h-screen flex flex-col justify-between  items-center">
+    <div className=" bg-light-primary dark:bg-dark-primary w-full h-screen flex flex-col justify-between items-center">
       <Header />
       <SectionWrapper>
-        <div className="w-3/4 flex items-start lg:items-center justify-between mt-14 lg:mt-36 h-screen lg:h-auto">
+        <div className="w-3/4 flex items-start lg:items-center justify-between mt-14 lg:mt-36  lg:h-auto">
           <div className="w-full lg:w-1/2 gap-9 flex flex-col justify-around items-center lg:items-start">
             <p className="text-lg lg:text-2xl text-light-text dark:text-dark-text text-center lg:text-start">
               Se você busca um profissional que combina habilidades técnicas
