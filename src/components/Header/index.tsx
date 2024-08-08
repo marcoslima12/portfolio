@@ -29,7 +29,7 @@ export const Header = () => {
         <Image
           src={theme === "dark" ? LogoDark : LogoLight}
           alt="Logo MarcosAntonio marcante"
-          className="w-[250px] lg:w-auto"
+          className="w-[150px] lg:w-auto"
         />
         <div className="hidden lg:flex items-center gap-9">
           <nav className="flex items-center">
@@ -59,8 +59,8 @@ export const Header = () => {
           </div>
           <button onClick={toggleNav}>
             <Hamburguer
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               fill={theme === "dark" ? "#F3F7EC" : ""}
             />
           </button>
