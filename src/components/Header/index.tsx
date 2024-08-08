@@ -54,14 +54,20 @@ export const Header = () => {
           <div className=" flex items-center justify-center ml-6">
             <IconButtonComponent
               alt="Botão para alternar o tema entre claro e escuro"
-              icon={<Light fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
+              icon={
+                <Light
+                  width={20}
+                  height={20}
+                  fill={theme === "dark" ? "#F3F7EC" : "#2C3132"}
+                />
+              }
               onClick={() => toggleTheme()}
             />
           </div>
           <button onClick={toggleNav}>
             <Hamburguer
-              width={30}
-              height={30}
+              width={28}
+              height={28}
               fill={theme === "dark" ? "#F3F7EC" : ""}
             />
           </button>

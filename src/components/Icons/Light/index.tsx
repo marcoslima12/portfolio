@@ -12,6 +12,7 @@ export const Light = ({
   return (
     <div  style={{ width, height }}>
       <svg
+     
         width={"inheirit"}
         height={"inheirit"}
         viewBox="0 0 24 24"

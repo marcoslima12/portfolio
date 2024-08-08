@@ -1,21 +1,9 @@
 import { useEffect, useState, useMemo, ReactNode, useCallback } from "react";
 import {
-  LinkedInDark,
-  LanguageIconLight,
-  ProfilePic,
-  LinkedInLight,
-  GithubDark,
-  GithubLight,
-  CarouselImage4,
   CarouselImage5,
-  GoToDark,
-  GoToLight,
 } from "@/assets";
 import { Header } from "@/components";
-import { roboto } from "@/styles/fonts/fonts";
-import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { SectionTitle } from "@/components/SectionTitle";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { useTheme } from "@/contexts/themeContext";
@@ -61,7 +49,7 @@ export default function Home() {
       <SectionWrapper>
         <div className="w-3/4 flex items-center justify-between mt-20 lg:mt-36 ">
           <div className="lg:w-1/2 gap-9 flex flex-col justify-around items-center lg:items-start">
-            <h1 className="text-xl lg:text-2xl text-light-text dark:text-light-primary">
+            <h1 className="text-xl lg:text-2xl text-light-text dark:text-light-primary text-center lg:text-start">
               Desenvolvedor Frontend | React | Next.js | Typescript | Scrum
               Master | Analista de Projetos | Pós Junior
             </h1>
@@ -86,12 +74,12 @@ export default function Home() {
               <PortfolioLink
                 href={"https://www.linkedin.com/in/marcos-antonio-vital-lima/"}
                 alt="ícone do Linkedin"
-                icon={<LinkedIn fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
+                icon={<LinkedIn  width={18} height={18} fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
               />
               <PortfolioLink
                 href={"https://github.com/marcoslima12"}
                 alt="ícone do Github"
-                icon={<Github fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
+                icon={<Github width={18} height={18} fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
               />
             </div>
           </div>

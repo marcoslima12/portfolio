@@ -1,10 +1,7 @@
 import { Header } from "@/components";
-import { SectionWrapper } from "@/components/SectionWrapper";
 import Slider from "react-slick";
 import Image from "next/image";
-import { StaticImageData } from "next/image";
 import {
-  CarouselImage,
   CarouselImage1,
   CarouselImage10,
   CarouselImage11,
