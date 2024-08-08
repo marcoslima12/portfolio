@@ -34,7 +34,7 @@ const About = ({ dot }: SliderTypes) => {
     arrows: false,
     centerPadding: "70px",
     appendDots: (dots: ReactNode) => (
-      <div className="w-3 h-3 rounded-full dark:dark">{dots}</div>
+      <div className="slick-dots w-3 h-3 rounded-full dark:dark">{dots}</div>
     ),
   };
 
@@ -55,8 +55,8 @@ const About = ({ dot }: SliderTypes) => {
   return (
     <div className="bg-light-primary h-screen dark:bg-dark-primary">
       <Header />
-      <div className="w-full h-full flex items-center justify-center gap-32">
-        <div className="w-1/3 ">
+      <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-32">
+        <div className="w-full lg:w-1/3 pt-24 lg:pt-0">
           <Slider
             className="rounded-lg flex flex-col justify-center"
             {...sliderSettings}
@@ -70,7 +70,7 @@ const About = ({ dot }: SliderTypes) => {
                   <Image
                     src={image}
                     alt="Foto do carrosel"
-                    className="rounded-lg w-auto h-[500px] box-border shadow shadow-dark-primary"
+                    className="rounded-lg w-auto max-w-64 lg:max-w-none h-[350px] lg:h-[500px] box-border shadow shadow-dark-primary"
                   />
                 </div>
               );
@@ -78,11 +78,11 @@ const About = ({ dot }: SliderTypes) => {
           </Slider>
         </div>
 
-        <div className="flex flex-col w-80 gap-10">
-          <h1 className="text-7xl font-bold text-left text-light-text dark:text-dark-text">
+        <div className="flex flex-col w-80 gap-5 lg:gap-10 mb-6 lg:mb-0">
+          <h1 className="text-3xl lg:text-7xl font-bold text-center  lg:text-left text-light-text dark:text-dark-text">
             Quem sou eu?
           </h1>
-          <p className="text-xl text-light-text dark:text-dark-text">
+          <p className="text-base lg:text-xl text-light-text dark:text-dark-text text-center  lg:text-left px-4 lg:px-0">
             Também chamado de{" "}
             <span className="text-dark-highlight font-bold">Marcante</span>, sou
             filho de Antônio e Rosineide.
