@@ -7,6 +7,8 @@ import { Phone } from "@/components/Icons/Phone";
 import { ImageProfile } from "@/components/ProfileImage";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { useTheme } from "@/contexts/themeContext";
+import Head from "next/head";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 const Contact = () => {
@@ -14,6 +16,9 @@ const Contact = () => {
 
   return (
     <div className=" bg-light-primary dark:bg-dark-primary w-full h-screen flex flex-col justify-between items-center">
+      <Head>
+        <title>Marcos | Contact</title>
+      </Head>
       <Header />
       <SectionWrapper>
         <div className="w-3/4 flex items-start lg:items-center justify-between mt-14 lg:mt-36  lg:h-auto">
@@ -50,7 +55,7 @@ const Contact = () => {
       </SectionWrapper>
       <span className="text-sm mb-4 lg:mb-3 text-light-text dark:text-dark-text">
         {" "}
-        &lt;feito por <span className="text-dark-highlight">Marcante</span>{" "}
+        &lt;feito por <Link href={"https://github.com/marcoslima12"} className="text-dark-highlight">marcoslima12</Link>{" "}
         /&gt;
       </span>
     </div>

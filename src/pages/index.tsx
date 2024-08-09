@@ -1,7 +1,5 @@
 import { useEffect, useState, useMemo, ReactNode, useCallback } from "react";
-import {
-  CarouselImage5,
-} from "@/assets";
+import { CarouselImage5 } from "@/assets";
 import { Header } from "@/components";
 import { useRouter } from "next/router";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -15,6 +13,7 @@ import { WorkExperience } from "@/components/Work";
 import { EducationalExperience } from "@/components/Educational";
 import { LinkedIn } from "@/components/Icons/LinkedIn";
 import { Github } from "@/components/Icons/Github";
+import Head from "next/head";
 
 export default function Home() {
   const router = useRouter();
@@ -41,10 +40,13 @@ export default function Home() {
     return () => clearInterval(intervalId);
   }, [changeSkillText]);
 
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className="bg-light-primary dark:bg-dark-primary">
+      <Head>
+        <title>Marcos | Home</title>
+      </Head>
       <Header />
       <SectionWrapper>
         <div className="w-3/4 flex items-center justify-between mt-20 lg:mt-36 ">
@@ -74,12 +76,24 @@ export default function Home() {
               <PortfolioLink
                 href={"https://www.linkedin.com/in/marcos-antonio-vital-lima/"}
                 alt="ícone do Linkedin"
-                icon={<LinkedIn  width={18} height={18} fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
+                icon={
+                  <LinkedIn
+                    width={18}
+                    height={18}
+                    fill={theme === "dark" ? "#F3F7EC" : "#2C3132"}
+                  />
+                }
               />
               <PortfolioLink
                 href={"https://github.com/marcoslima12"}
                 alt="ícone do Github"
-                icon={<Github width={18} height={18} fill={theme === "dark" ? "#F3F7EC" : "#2C3132"} />}
+                icon={
+                  <Github
+                    width={18}
+                    height={18}
+                    fill={theme === "dark" ? "#F3F7EC" : "#2C3132"}
+                  />
+                }
               />
             </div>
           </div>

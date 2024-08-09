@@ -16,6 +16,7 @@ import {
 } from "@/assets";
 import { ReactNode } from "react";
 import { SectionWrapper } from "@/components/SectionWrapper";
+import Head from "next/head";
 
 type SliderTypes = {
   dot: ReactNode;
@@ -52,6 +53,9 @@ const About = ({ dot }: SliderTypes) => {
 
   return (
     <div className="min-h-screen bg-light-primary dark:bg-dark-primary">
+      <Head>
+        <title>Marcos | About</title>
+      </Head>
       <Header />
       <SectionWrapper>
         <div className=" w-full flex flex-col  lg:flex-row items-center justify-center gap-12 lg:gap-32 mt-14 lg:mt-36">
