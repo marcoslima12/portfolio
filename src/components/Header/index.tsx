@@ -26,7 +26,7 @@ export const Header = () => {
 
   return (
     <header className="bg-light-primary dark:bg-dark-primary w-full h-16 lg:h-28  shadow-sm lg:shadow-lg shadow-light-highlight lg:shadow-light-highlight fixed z-10 ">
-      <div className="container mx-auto flex items-center justify-between h-full p-6 lg:p-0">
+      <div className="container mx-auto flex items-center justify-between h-full p-6 lg:py-0 lg:px-10 xl:px-0">
         <Image
           src={theme === "dark" ? LogoDark : LogoLight}
           alt="Logo MarcosAntonio marcante"
