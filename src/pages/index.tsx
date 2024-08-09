@@ -62,11 +62,11 @@ export default function Home() {
               problemas, aprimorando processos e impactando pessoas, contextos e
               a sociedade.
             </p>
-            <div className="lg:w-1/2 w-full flex items-start justify-around lg:justify-start gap-5">
+            <div className="w-full flex items-start sm:justify-center justify-around lg:justify-start gap-5">
               <a
                 href="/CURRÍCULO-2024.pdf"
                 download
-                className="w-32 bg-dark-highlight h-9 rounded-2xl text-dark-primary hover:text-dark-text transition-all flex justify-center items-center"
+                className="w-32  bg-dark-highlight h-9 rounded-2xl text-dark-primary hover:text-dark-text transition-all flex justify-center items-center"
               >
                 Meu currículo
               </a>
@@ -93,7 +93,7 @@ export default function Home() {
             &lt;Um desenvolvedor{" "}
             <span className="text-dark-highlight">{currentText}</span> /&gt;
           </h1>
-          <p className="px-4 lg:px-0 lg:w-1/3 text-center text-base lg:text-xl text-light-text dark:text-dark-text">
+          <p className="px-4 lg:px-0 sm:w-2/3 text-center text-base lg:text-xl text-light-text dark:text-dark-text">
             Além de habilidades técnicas, trago em minha bagagem diversas
             habilidades interpessoais, como <SoftSkill text="boa comunicação" />
             , <SoftSkill text="liderança eficaz" /> ,{" "}

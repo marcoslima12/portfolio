@@ -1,7 +1,6 @@
-import {
-  ProfileContact,
-} from "@/assets";
+import { ProfileContact } from "@/assets";
 import { Header } from "@/components";
+import { ContactOption } from "@/components/Contact";
 import { Email } from "@/components/Icons/Email";
 import { LinkedIn } from "@/components/Icons/LinkedIn";
 import { Phone } from "@/components/Icons/Phone";
@@ -9,28 +8,6 @@ import { ImageProfile } from "@/components/ProfileImage";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { useTheme } from "@/contexts/themeContext";
 import { ReactNode } from "react";
-
-interface ContactOptionProps {
-  icon: ReactNode;
-  info: string;
-  link?: string;
-}
-
-const ContactOption = ({ icon, info, link }: ContactOptionProps) => {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`flex gap-3 items-center justify-start text-light-text dark:text-dark-text hover:${
-        link ? "underline" : "none"
-      }`}
-    >
-      {icon}
-      <span className="text-sm lg:text-lg">{info}</span>
-    </a>
-  );
-};
 
 const Contact = () => {
   const { theme } = useTheme();
