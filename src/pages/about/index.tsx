@@ -50,7 +50,7 @@ const About = ({ dot }: SliderTypes) => {
   return (
     <div className="min-h-screen bg-light-primary dark:bg-dark-primary">
       <Head>
-        <title>Marcos | About</title>
+        <title>Marcos | Sobre</title>
       </Head>
       <Header />
       <SectionWrapper>

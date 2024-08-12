@@ -17,7 +17,7 @@ const Contact = () => {
   return (
     <div className=" bg-light-primary dark:bg-dark-primary w-full h-screen flex flex-col justify-between items-center">
       <Head>
-        <title>Marcos | Contact</title>
+        <title>Marcos | Contato</title>
       </Head>
       <Header />
       <SectionWrapper>

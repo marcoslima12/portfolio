@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="bg-light-primary dark:bg-dark-primary">
       <Head>
-        <title>Marcos | Home</title>
+        <title>Marcos | Início</title>
       </Head>
       <Header />
       <SectionWrapper>
