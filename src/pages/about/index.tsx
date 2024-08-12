@@ -4,14 +4,12 @@ import Image from "next/image";
 import {
   CarouselImage1,
   CarouselImage10,
-  CarouselImage11,
   CarouselImage2,
   CarouselImage3,
   CarouselImage4,
   CarouselImage5,
   CarouselImage6,
   CarouselImage7,
-  CarouselImage8,
   CarouselImage9,
 } from "@/assets";
 import { ReactNode } from "react";
@@ -45,10 +43,8 @@ const About = ({ dot }: SliderTypes) => {
     CarouselImage5,
     CarouselImage6,
     CarouselImage7,
-    CarouselImage8,
     CarouselImage9,
     CarouselImage10,
-    CarouselImage11,
   ];
 
   return (
@@ -58,7 +54,7 @@ const About = ({ dot }: SliderTypes) => {
       </Head>
       <Header />
       <SectionWrapper>
-        <div className=" w-full flex flex-col  lg:flex-row items-center justify-center gap-12 lg:gap-32 mt-14 lg:mt-36">
+        <div className=" w-full flex flex-col  lg:flex-row items-center justify-center gap-12 lg:gap-32 mt-14 lg:mt-44">
           <div className="w-full lg:w-1/3">
             <Slider
               className="rounded-lg flex flex-col justify-center"
@@ -92,10 +88,9 @@ const About = ({ dot }: SliderTypes) => {
               <br />
               Natural de Timbaúba, interior de Pernambuco, sou fã de música e
               apaixonado por conexões e experiências. Gosto de praticar corrida,
-              andar e bicicleta e fazer academia, além de cantar e desenhar. Na
-              verdade, faço de tudo um pouco, mesmo que não seja o melhor
-              naquilo. Acredito que bom mesmo é experimentar. Por isso, me
-              considero um
+              pedalar e fazer academia, além de cantar e desenhar. Na verdade,
+              faço de tudo um pouco, mesmo que não seja o melhor naquilo.
+              Acredito que bom mesmo é experimentar. Por isso, me considero um
               <span className="text-dark-highlight font-bold">
                 {" "}
                 experimentador da vida

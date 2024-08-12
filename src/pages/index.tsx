@@ -49,7 +49,7 @@ export default function Home() {
       </Head>
       <Header />
       <SectionWrapper>
-        <div className="w-3/4 flex items-center justify-between mt-20 lg:mt-36 ">
+        <div className="w-3/4 flex items-center justify-between mt-20 lg:mt-44">
           <div className="lg:w-1/2 gap-9 flex flex-col justify-around items-center lg:items-start">
             <h1 className="text-xl lg:text-2xl text-light-text dark:text-light-primary text-center lg:text-start">
               Desenvolvedor Frontend | React | Next.js | Typescript | Scrum

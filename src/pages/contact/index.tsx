@@ -21,8 +21,8 @@ const Contact = () => {
       </Head>
       <Header />
       <SectionWrapper>
-        <div className="w-3/4 flex items-start lg:items-center justify-between mt-14 lg:mt-36  lg:h-auto">
-          <div className="w-full lg:w-1/2 gap-9 flex flex-col justify-around items-center lg:items-start">
+        <div className="w-3/4 flex md:flex-col lg:flex-row md:items-center md:gap-4 items-start lg:items-center lg:justify-between mt-14 lg:mt-44  lg:h-auto">
+          <div className="w-full md:order-2 lg:order-first lg:w-1/2 gap-9 flex flex-col justify-around items-center lg:items-start">
             <p className="text-lg lg:text-2xl text-light-text dark:text-dark-text text-center lg:text-start">
               Se você busca um profissional que combina habilidades técnicas
               sólidas com uma mentalidade inovadora e compromisso com a

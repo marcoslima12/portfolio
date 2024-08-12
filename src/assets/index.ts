@@ -14,10 +14,8 @@ import CarouselImage4 from "./foto-carrossel4.jpeg";
 import CarouselImage5 from "./foto-carrossel5.jpeg";
 import CarouselImage6 from "./foto-carrossel6.jpeg";
 import CarouselImage7 from "./foto-carrossel7.jpeg";
-import CarouselImage8 from "./foto-carrossel8.jpeg";
 import CarouselImage9 from "./foto-carrossel9.jpeg";
 import CarouselImage10 from "./foto-carrossel10.jpeg";
-import CarouselImage11 from "./foto-carrossel11.jpeg";
 import GoToDark from './goToDark.svg'; 
 import GoToLight from './goToLight.svg'; 
 
@@ -37,10 +35,8 @@ export {
   CarouselImage5,
   CarouselImage6,
   CarouselImage7,
-  CarouselImage8,
   CarouselImage9,
   CarouselImage10,
-  CarouselImage11,
   GoToDark,
   GoToLight,
   ProfileContact
