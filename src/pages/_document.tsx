@@ -1,4 +1,3 @@
-import { roboto } from "@/styles/fonts/fonts";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -17,7 +16,7 @@ export default function Document() {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Head>
-      <body className={`${roboto.className} bg-dark-primary text-dark-text`}>
+      <body className="font-roboto bg-dark-primary text-dark-text">
         <Main />
         <NextScript />
       </body>

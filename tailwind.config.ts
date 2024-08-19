@@ -22,6 +22,9 @@ const config: Config = {
         },
       },
     },
+    fontFamily: {
+      roboto: ['Roboto']
+    },
   },
   plugins: [],
 };
