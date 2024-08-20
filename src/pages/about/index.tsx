@@ -83,7 +83,7 @@ const About = ({ dot }: SliderTypes) => {
             </h1>
             <p className="text-base lg:text-xl text-light-text dark:text-dark-text text-center  lg:text-left px-4 lg:px-0">
               Também chamado de{" "}
-              <span className="text-dark-highlight font-bold">Marcante</span>,
+              <span className="text-highlight font-bold">Marcante</span>,
               sou filho de Antônio e Rosineide.
               <br />
               Natural de Timbaúba, interior de Pernambuco, sou fã de música e
@@ -91,7 +91,7 @@ const About = ({ dot }: SliderTypes) => {
               pedalar e fazer academia, além de cantar e desenhar. Na verdade,
               faço de tudo um pouco, mesmo que não seja o melhor naquilo.
               Acredito que bom mesmo é experimentar. Por isso, me considero um
-              <span className="text-dark-highlight font-bold">
+              <span className="text-highlight font-bold">
                 {" "}
                 experimentador da vida
               </span>

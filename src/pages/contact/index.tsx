@@ -55,7 +55,7 @@ const Contact = () => {
       </SectionWrapper>
       <span className="text-sm mb-4 lg:mb-3 text-light-text dark:text-dark-text">
         {" "}
-        &lt;feito por <Link href={"https://github.com/marcoslima12"} className="text-dark-highlight">marcoslima12</Link>{" "}
+        &lt;feito por <Link href={"https://github.com/marcoslima12"} className="text-highlight">marcoslima12</Link>{" "}
         /&gt;
       </span>
     </div>

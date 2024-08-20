@@ -25,7 +25,7 @@ export const Header = () => {
   const { isNavOpen, toggleNav } = useNav();
 
   return (
-    <header className="bg-light-primary dark:bg-dark-primary w-full h-16 lg:h-32  shadow-sm lg:shadow-lg shadow-light-highlight lg:shadow-light-highlight fixed z-10 ">
+    <header className="bg-light-primary dark:bg-dark-primary w-full h-16 lg:h-32  shadow-sm lg:shadow-lg shadow-highlight lg:shadow-highlight fixed z-10 ">
       <div className="container mx-auto flex items-center justify-between h-full p-6 lg:py-0 lg:px-10 xl:px-0">
         <Image
           src={theme === "dark" ? LogoDark : LogoLight}
@@ -74,7 +74,7 @@ export const Header = () => {
         </div>
       </div>
       <div
-        className={`shadow-sm shadow-light-highlight lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`shadow-sm shadow-highlight lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isNavOpen ? "max-h-96" : "max-h-0"
         }`}
       >

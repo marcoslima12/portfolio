@@ -3,5 +3,5 @@ interface HardSkillProps {
 }
 
 export const HardSkill = ({ skill }: HardSkillProps) => {
-  return <span className="text-sm lg:text-base text-dark-highlight">{skill}</span>;
+  return <span className="text-sm lg:text-base text-highlight">{skill}</span>;
 };

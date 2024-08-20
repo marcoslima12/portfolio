@@ -68,7 +68,7 @@ export default function Home() {
               <a
                 href="/CURRÍCULO-2024.pdf"
                 download
-                className="w-32  bg-dark-highlight h-9 rounded-2xl text-dark-primary hover:text-dark-text transition-all flex justify-center items-center"
+                className="w-32  bg-highlight h-9 rounded-2xl text-dark-primary hover:text-dark-text transition-all flex justify-center items-center"
               >
                 Meu currículo
               </a>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="flex items-center text-center flex-col justify-normal gap-3">
           <h1 className="pb-6 lg:pb-0 text-xl lg:text-4xl text-light-text dark:text-dark-text">
             &lt;Um desenvolvedor{" "}
-            <span className="text-dark-highlight">{currentText}</span> /&gt;
+            <span className="text-highlight">{currentText}</span> /&gt;
           </h1>
           <p className="px-4 lg:px-0 sm:w-2/3 text-center text-base lg:text-xl text-light-text dark:text-dark-text">
             Além de habilidades técnicas, trago em minha bagagem diversas

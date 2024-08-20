@@ -32,7 +32,7 @@ export const WorkExperience = ({
                 <span key={index} className="flex items-center gap-1">
                   <HardSkill skill={skill} />
                   {index < skills.length - 1 && (
-                    <span className="separator text-light-highlight">•</span>
+                    <span className="separator text-highlight">•</span>
                   )}
                 </span>
               ))}

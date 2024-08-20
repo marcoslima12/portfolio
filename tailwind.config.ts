@@ -13,13 +13,12 @@ const config: Config = {
         light: {
           primary: "#F3F7EC",
           text: "#2C3132",
-          highlight: "#E88D67",
         },
         dark: {
           primary: "#2C3132",
           text: "#F3F7EC",
-          highlight: "#E88D67",
         },
+        highlight: "#E88D67",
       },
     },
     fontFamily: {
