@@ -20,14 +20,6 @@
   @apply text-dark-text;
 }
 
-.flex-important {
-  display: flex !important;
-}
-
-.text-highlight-important {
-  @apply text-highlight !important;
-}
-
 @media (max-width: 640px) {
   .slick-dots {
     display: none;

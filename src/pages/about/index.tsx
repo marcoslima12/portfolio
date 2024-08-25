@@ -26,8 +26,7 @@ const About = ({ dot }: SliderTypes) => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    autoplaySpeed: 3000,
-    autoplay: true,
+    autoplaySpeed: 3000, 
     arrows: false,
     centerPadding: "70px",
     appendDots: (dots: ReactNode) => (
@@ -64,7 +63,7 @@ const About = ({ dot }: SliderTypes) => {
                 return (
                   <div
                     key={index}
-                    className="p-1 flex flex-important justify-center"
+                    className="p-1 !flex justify-center"
                   >
                     <Image
                       src={image}
@@ -83,8 +82,8 @@ const About = ({ dot }: SliderTypes) => {
             </h1>
             <p className="text-base lg:text-xl text-light-text dark:text-dark-text text-center  lg:text-left px-4 lg:px-0">
               Também chamado de{" "}
-              <span className="text-highlight font-bold">Marcante</span>,
-              sou filho de Antônio e Rosineide.
+              <span className="text-highlight font-bold">Marcante</span>, sou
+              filho de Antônio e Rosineide.
               <br />
               Natural de Timbaúba, interior de Pernambuco, sou fã de música e
               apaixonado por conexões e experiências. Gosto de praticar corrida,

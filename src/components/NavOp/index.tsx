@@ -19,7 +19,7 @@ export const NavOp = ({ link, pageName, currentPath }: navOpRouting) => {
       <span
         className={`text-sm lg:text-lg font-medium text-light-text lg:hover:text-highlight dark:text-dark-text dark:hover:text-highlight transition-all lg:border-l-4 box-border lg:pl-2 ${
           currentPath === link
-            ? "border-highlight text-highlight-important hover:te dark:text-highlight-important dark:border-highlight"
+            ? "border-highlight !text-highlight hover:te dark:!text-highlight dark:border-highlight"
             : "border-transparent"
         }`}
       >
